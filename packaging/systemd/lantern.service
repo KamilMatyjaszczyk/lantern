@@ -1,0 +1,22 @@
+[Unit]
+Description=Lantern lightweight system collector
+StartLimitIntervalSec=300
+StartLimitBurst=10
+
+[Service]
+Type=exec
+ExecStart="%h/.local/bin/lantern" --collect
+# The installed launcher supplies the saved database path for both CLI and service.
+UnsetEnvironment=LANTERN_DB XDG_STATE_HOME
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=20
+KillSignal=SIGTERM
+UMask=0077
+NoNewPrivileges=true
+Nice=10
+LimitCORE=0
+MemoryAccounting=true
+
+[Install]
+WantedBy=default.target

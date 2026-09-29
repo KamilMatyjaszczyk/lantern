@@ -1,0 +1,19 @@
+[package]
+name = "lantern"
+version = "1.0.1"
+edition = "2024"
+description = "A lightweight Linux system monitor with terminal history"
+publish = false
+
+[features]
+default = ["nvidia"]
+nvidia = ["dep:nvml-wrapper"]
+
+[dependencies]
+libc = "0.2"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+crossterm = { version = "0.29", default-features = false, features = ["events"] }
+nvml-wrapper = { version = "0.13", optional = true }
+rusqlite = { version = "0.40", default-features = false, features = ["bundled"] }
+signal-hook = { version = "0.4", default-features = false }
+terminal_size = "0.4"

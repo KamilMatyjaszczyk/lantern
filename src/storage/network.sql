@@ -1,0 +1,26 @@
+-- Bounded group details; old samples remain NULL. Rates are per second.
+ALTER TABLE samples ADD COLUMN net_ethernet_rx REAL CHECK (net_ethernet_rx >= 0);
+ALTER TABLE samples ADD COLUMN net_ethernet_tx REAL CHECK (net_ethernet_tx >= 0);
+ALTER TABLE samples ADD COLUMN net_ethernet_rx_errors REAL CHECK (net_ethernet_rx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_ethernet_tx_errors REAL CHECK (net_ethernet_tx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_ethernet_rx_drops REAL CHECK (net_ethernet_rx_drops >= 0);
+ALTER TABLE samples ADD COLUMN net_ethernet_tx_drops REAL CHECK (net_ethernet_tx_drops >= 0);
+ALTER TABLE samples ADD COLUMN net_wifi_rx REAL CHECK (net_wifi_rx >= 0);
+ALTER TABLE samples ADD COLUMN net_wifi_tx REAL CHECK (net_wifi_tx >= 0);
+ALTER TABLE samples ADD COLUMN net_wifi_rx_errors REAL CHECK (net_wifi_rx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_wifi_tx_errors REAL CHECK (net_wifi_tx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_wifi_rx_drops REAL CHECK (net_wifi_rx_drops >= 0);
+ALTER TABLE samples ADD COLUMN net_wifi_tx_drops REAL CHECK (net_wifi_tx_drops >= 0);
+ALTER TABLE samples ADD COLUMN net_virtual_rx REAL CHECK (net_virtual_rx >= 0);
+ALTER TABLE samples ADD COLUMN net_virtual_tx REAL CHECK (net_virtual_tx >= 0);
+ALTER TABLE samples ADD COLUMN net_virtual_rx_errors REAL CHECK (net_virtual_rx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_virtual_tx_errors REAL CHECK (net_virtual_tx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_virtual_rx_drops REAL CHECK (net_virtual_rx_drops >= 0);
+ALTER TABLE samples ADD COLUMN net_virtual_tx_drops REAL CHECK (net_virtual_tx_drops >= 0);
+ALTER TABLE samples ADD COLUMN net_unknown_rx REAL CHECK (net_unknown_rx >= 0);
+ALTER TABLE samples ADD COLUMN net_unknown_tx REAL CHECK (net_unknown_tx >= 0);
+ALTER TABLE samples ADD COLUMN net_unknown_rx_errors REAL CHECK (net_unknown_rx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_unknown_tx_errors REAL CHECK (net_unknown_tx_errors >= 0);
+ALTER TABLE samples ADD COLUMN net_unknown_rx_drops REAL CHECK (net_unknown_rx_drops >= 0);
+ALTER TABLE samples ADD COLUMN net_unknown_tx_drops REAL CHECK (net_unknown_tx_drops >= 0);
+PRAGMA user_version = 3;

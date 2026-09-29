@@ -1,0 +1,45 @@
+# Rust build output. Keep Cargo.lock tracked for reproducible application builds.
+/target/
+
+# Generated distribution archives and packaging temporary files.
+/lantern-*.tar.gz
+/.lantern-hermit.*
+
+# Local monitoring history and SQLite sidecar files.
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite-journal
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*.sqlite3-journal
+
+# Logs and temporary files.
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Python cache from installation tests.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local environment settings; example files can be committed.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Local tooling state and operating-system metadata.
+/.codex/
+/.agents/
+.DS_Store
+Thumbs.db
